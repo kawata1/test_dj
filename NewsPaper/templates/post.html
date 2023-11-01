@@ -1,0 +1,18 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+    <h1>Страница 1</h1>
+    <h3>{{ time_now|date:'M d Y' }}</h3>
+    <hr>
+        <table>
+           <tr>
+               <font size="7"><span style="font-family: Arial Black;">{{news.title}}</span></font><br>
+               <font size="5">{{news.text}}</font>
+               {{news.categorys.name}}
+           </tr>
+       </table>
+{% endblock content %}
